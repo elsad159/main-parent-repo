@@ -1,0 +1,60 @@
+/* ChildrenPage.css */
+
+.children-page {
+  display: flex;
+  justify-content: start;
+  height: 100vh;
+}
+
+.children-content {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.accordion-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion {
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.accordion-label {
+  display: block;
+  padding: 10px;
+  background-color: #e51e32;
+  color: #fff;
+  cursor: pointer;
+}
+
+.accordion-content {
+  background-color: #fff;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.accordion input[type="checkbox"] {
+  display: none;
+}
+
+.accordion
+  input[type="checkbox"]:checked
+  + .accordion-label
+  + .accordion-content {
+  max-height: 100px; /* Set to the desired maximum height */
+  padding: 10px;
+}
